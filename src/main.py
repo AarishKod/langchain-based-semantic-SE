@@ -46,8 +46,8 @@ vector_store = InMemoryVectorStore(embedding=embeddings)
 # 200 char overlap chunks
 ids = vector_store.add_documents(documents=all_splits)
 
-results = vector_store.similarity_search(
-    "What was the free cash flow"
+results = vector_store.similarity_search_with_score(
+    "2023 net profit"
 )
 
 for result in results:
